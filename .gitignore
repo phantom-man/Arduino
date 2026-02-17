@@ -1,12 +1,8 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-.venv/
-venv/
-*.egg-info/
-dist/
-build/
+# Arduino build artifacts
+*.elf
+*.hex
+*.bin
+*.map
 
 # IDE
 .vscode/
@@ -18,12 +14,6 @@ build/
 Thumbs.db
 Desktop.ini
 .DS_Store
-
-# Arduino build artifacts
-*.elf
-*.hex
-*.bin
-*.map
 
 # Temporary files
 *.tmp
