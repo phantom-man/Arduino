@@ -1,0 +1,109 @@
+{
+    "name": "PETG Translucent - Qidi Q2 Advanced",
+    "description": "Optimized PETG-Translucent profile for Qidi Q2 2025 with hardened steel nozzle. Tuned for clarity, minimal stringing, and strong layer adhesion.",
+    "printer": "Qidi Q2 2025",
+    "nozzle": "0.4mm hardened steel",
+    "filament": {
+        "type": "PETG",
+        "brand": "Name Brand Translucent",
+        "colors": ["Clear", "Black", "Red", "Yellow"],
+        "diameter": 1.75,
+        "density": 1.27,
+        "cost_per_kg": 14.59
+    },
+    "temperature": {
+        "nozzle_temperature": 240,
+        "nozzle_temperature_initial_layer": 245,
+        "bed_temperature": 80,
+        "bed_temperature_initial_layer": 85,
+        "chamber_temperature": 35,
+        "comment": "Hardened steel nozzle needs +5-10C vs brass. 240C ensures full melt for translucent clarity. Low chamber avoids PETG heat creep."
+    },
+    "layers": {
+        "layer_height": 0.16,
+        "initial_layer_height": 0.24,
+        "wall_loops": 3,
+        "top_shell_layers": 5,
+        "bottom_shell_layers": 4,
+        "infill_density": 20,
+        "infill_pattern": "gyroid"
+    },
+    "speed": {
+        "outer_wall_speed": 50,
+        "inner_wall_speed": 80,
+        "infill_speed": 100,
+        "internal_solid_infill_speed": 80,
+        "top_surface_speed": 40,
+        "initial_layer_speed": 25,
+        "bridge_speed": 30,
+        "travel_speed": 200,
+        "comment": "Conservative outer wall (50mm/s) for translucent surface quality — faster speeds show layer lines more in clear PETG. Slow bridges prevent sag."
+    },
+    "retraction": {
+        "retraction_length": 0.8,
+        "retraction_speed": 35,
+        "deretraction_speed": 25,
+        "retract_before_wipe": "70%",
+        "wipe_distance": 1.5,
+        "minimum_travel": 1.5,
+        "retract_on_layer_change": true,
+        "z_hop": 0.4,
+        "comment": "Qidi Q2 direct drive = short retraction (0.8mm). Slow deretraction (25mm/s) prevents PETG blobs. Wipe + retract-before-wipe combo eliminates stringing."
+    },
+    "cooling": {
+        "fan_speed_min": 40,
+        "fan_speed_max": 70,
+        "close_fan_first_layers": 3,
+        "slow_down_layer_time": 8,
+        "slow_down_min_speed": 15,
+        "comment": "40-70% fan is the PETG sweet spot: enough to solidify overhangs, not so much that layer bonding suffers. No fan first 3 layers for bed adhesion."
+    },
+    "flow": {
+        "filament_flow_ratio": 0.98,
+        "line_width": 0.45,
+        "comment": "0.98 flow ratio — PETG tends to over-extrude slightly. Dial in with a single-wall flow test cube if needed."
+    },
+    "quality": {
+        "ironing": false,
+        "seam_position": "aligned",
+        "detect_overhang_wall": true,
+        "overhang_speed_classic": true,
+        "reduce_crossing_wall": true,
+        "only_retract_crossing_perimeter": true,
+        "reduce_infill_retraction": true,
+        "comment": "Overhang detection slows down on steep faces to reduce sag. Crossing-wall avoidance + selective retraction cuts stringing."
+    },
+    "adhesion": {
+        "brim_type": "auto_brim",
+        "brim_width": 5,
+        "comment": "Auto-brim adds brim only when needed. PETG usually sticks well at 80C bed."
+    },
+    "multi_color_ams": {
+        "enabled": true,
+        "flush_volume": 120,
+        "flush_into_infill": true,
+        "flush_into_support": true,
+        "filament_slot_1": "Clear",
+        "filament_slot_2": "Red",
+        "filament_slot_3": "Yellow",
+        "filament_slot_4": "Black",
+        "prime_tower": true,
+        "prime_tower_width": 40,
+        "prime_tower_brim": true,
+        "wipe_distance": 2.0,
+        "comment": "Prime tower collects purge on filament changes. Flush into infill reduces waste. Ready for AMS when it arrives."
+    },
+    "print_orientation_notes": {
+        "lid": "Flat side down (recessed panel faces up)",
+        "dragon_knob": "Base-down, may need tree supports for horns",
+        "corner_accents": "Vertical (L-shape at bottom), print all 4 on one plate",
+        "claw_feet": "Pad-down (flat base on build plate), print all 4 on one plate"
+    },
+    "tuning_tips": {
+        "stringing_test": "Print a retraction tower — adjust retraction_length 0.6-1.0mm",
+        "flow_calibration": "Single-wall cube: measure wall with calipers, target 0.45mm",
+        "temp_tower": "Print a temp tower 230-250C, pick the floor with best clarity + no blobs",
+        "bed_adhesion": "If lifting, bump initial bed temp to 90C or add glue stick",
+        "transparency": "For maximum clarity: 0.12mm layer height, 35mm/s outer wall, 0.96 flow"
+    }
+}

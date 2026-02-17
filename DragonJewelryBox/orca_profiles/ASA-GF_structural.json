@@ -1,0 +1,76 @@
+{
+    "_comment": "Orca Slicer Profile - ASA-GF Strength & Speed for Qidi Q2",
+    "_parts": ["01_base_tray.stl", "02_upper_tray.stl"],
+    "_material": "ASA-GF (Glass Fiber Reinforced ASA) - Black",
+
+    "printer_settings": {
+        "printer": "Qidi Q2",
+        "nozzle_diameter": 0.4,
+        "nozzle_type": "Hardened Steel",
+        "build_volume": "270x270x256mm"
+    },
+
+    "filament_settings": {
+        "filament_type": "ASA-GF",
+        "filament_diameter": 1.75,
+        "nozzle_temperature_initial_layer": 270,
+        "nozzle_temperature": 270,
+        "bed_temperature_initial_layer": 105,
+        "bed_temperature": 105,
+        "chamber_temperature": 60,
+        "fan_min_speed": 0,
+        "fan_max_speed": 10,
+        "filament_retraction_length": 1.0,
+        "filament_retraction_speed": 40,
+        "filament_flow_ratio": 1.03
+    },
+
+    "print_settings": {
+        "layer_height": 0.20,
+        "initial_layer_height": 0.25,
+        "line_width": 0.45,
+        "wall_loops": 6,
+        "top_shell_layers": 5,
+        "bottom_shell_layers": 5,
+        "sparse_infill_density": 40,
+        "sparse_infill_pattern": "gyroid",
+        "infill_combination": false,
+
+        "initial_layer_speed": 40,
+        "outer_wall_speed": 80,
+        "inner_wall_speed": 120,
+        "sparse_infill_speed": 120,
+        "top_surface_speed": 80,
+        "travel_speed": 300,
+
+        "enable_support": false,
+        "brim_type": "outer_only",
+        "brim_width": 10,
+
+        "seam_position": "aligned",
+        "z_hop": 0.4,
+        "avoid_crossing_perimeters": true
+    },
+
+    "quality_notes": [
+        "Strength & Speed profile: 270°C nozzle for maximum layer bonding",
+        "6 wall loops provide excellent structural rigidity for box walls",
+        "40% Gyroid infill for high strength-to-weight ratio",
+        "10mm brim prevents corner lifting (ASA-GF is warp-prone)",
+        "Flow ratio 1.03 slightly over-extrudes for density and layer bond",
+        "0-10% fan only — ASA-GF needs minimal cooling for adhesion",
+        "60°C chamber temperature — keep enclosure sealed during print",
+        "Use hardened steel nozzle — glass fiber destroys brass nozzles",
+        "Allow parts to cool slowly in chamber to reduce warping"
+    ],
+
+    "print_orientation": {
+        "base_tray": "Print upright (opening facing up) - no supports needed",
+        "upper_tray": "Print upright (opening facing up) - no supports needed"
+    },
+
+    "estimated_print_times": {
+        "base_tray": "5-7 hours (6 walls + 40% infill)",
+        "upper_tray": "5-7 hours (6 walls + 40% infill)"
+    }
+}
